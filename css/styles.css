@@ -440,8 +440,6 @@ h5 {
   width: 13rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
   transition-duration: 200ms;
 }
 
@@ -603,8 +601,6 @@ h5 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .3em;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .btn:hover {
@@ -880,12 +876,6 @@ h5 {
   transition-duration: 200ms;
 }
 
-#hero {
-  background-image: url("../images/desktop/image-hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .item-container {
   display: flex;
   width: 100%;
@@ -897,14 +887,12 @@ h5 {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2rem * var(--tw-space-x-reverse));
-  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .item-container {
   font-size: 1.5rem;
   line-height: 2rem;
+  text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -918,13 +906,15 @@ h5 {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem * var(--tw-space-x-reverse));
+    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 }
 
 .item {
   position: relative;
   overflow: hidden;
-  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
@@ -952,6 +942,19 @@ h5 {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #fff var(--tw-gradient-to-position);
   opacity: 0.7;
+}
+
+#hero {
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 576px) {
+  #hero {
+    background-image: url("../images/mobile/image-hero.jpg");
+    background-position: center;
+  }
 }
 
 /* Hamburger Menu */
@@ -999,13 +1002,6 @@ h5 {
 
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
-}
-
-@media (max-width: 576px) {
-  #hero {
-    background-image: url("../images/mobile/image-hero.jpg");
-    background-position: center;
-  }
 }
 
 .hover\:text-pink-500:hover {
